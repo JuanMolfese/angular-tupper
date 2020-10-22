@@ -1,5 +1,12 @@
 .clearance {
-    border: 2px solid green;
-    background: green;
+    background: gray;
     color: white;
+}
+
+td {
+    vertical-align: middle;
+}
+
+input {
+    max-width: 40px;
 }

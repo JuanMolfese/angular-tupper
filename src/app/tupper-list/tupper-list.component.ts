@@ -16,6 +16,7 @@ export class TupperListComponent implements OnInit {
       stock: 5,
       image:'assets/img/practi_freeze500.jpg',
       clearance: false,
+      quantity:0,
     },
     { name:'Eco Twist',
       type:'heladera',
@@ -23,6 +24,7 @@ export class TupperListComponent implements OnInit {
       stock: 3,
       image:'assets/img/eco_twist500.png',
       clearance: true,
+      quantity:0,
     },
     { name:'Poeme',
       type:'heladera',
@@ -30,6 +32,7 @@ export class TupperListComponent implements OnInit {
       stock: 0,
       image:'assets/img/poeme.png',
       clearance: false,
+      quantity:0,
     }
   ];
 
@@ -38,4 +41,15 @@ export class TupperListComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  UpQuantity(product: Product): void {
+    if(product.stock>product.quantity){ 
+      product.quantity++;
+    }
+  }
+
+  DownQuantity(product: Product): void {
+    if(product.quantity>0){
+      product.quantity--;
+    }
+  }
 }
