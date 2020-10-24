@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { TupperListComponent } from './tupper-list/tupper-list.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { FormsModule } from '@angular/forms';
-import { TupperContactComponent } from './tupper-contact/tupper-contact.component';
+import { TupperContactComponent } from "./tupper-contact/TupperContactComponent";
 import { TupperMainComponent } from './tupper-main/tupper-main.component';
 
 @NgModule({
