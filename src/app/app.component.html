@@ -1,18 +1,18 @@
 <nav class="pl-md-5 py-3 navbar fixed-top navbar-expand-md navbar-dark bg-secondary">
-    <a class="navbar-brand text-white" href="#">Tupper Tres Arroyos</a>
+    <a class="navbar-brand text-white" href="main">Tupper Tres Arroyos</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
         <ul class="navbar-nav">
             <li class="nav-item active mx-2">
-                <a class="nav-link text-white" href="#">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link text-white" href="main">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item mx-2">
-                <a class="nav-link text-white" href="#">Productos</a>
+                <a class="nav-link text-white" href="main">Productos</a>
             </li>
             <li class="nav-item mx-2">
-                <a class="nav-link text-white" href="#">Contacto</a>
+                <a class="nav-link text-white" href="contact">Contacto</a>
             </li>
         </ul>
         <a class="nav-link text-white mr-4" href="#"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-cart" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -24,10 +24,8 @@
 </nav>
 
 <div class="container-fluid mt-5">
-    <br>
-    <br>
-    <br>
-    <br>
+
+    <br><br>
     <br>
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -57,7 +55,7 @@
     </div>
 
     <div>
-        <app-tupper-main></app-tupper-main>
+        <router-outlet></router-outlet>
     </div>
     <br>
 
