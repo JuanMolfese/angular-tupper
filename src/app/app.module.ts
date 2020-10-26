@@ -8,6 +8,7 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { FormsModule } from '@angular/forms';
 import { TupperContactComponent } from "./tupper-contact/tupper-contact.component";
 import { TupperMainComponent } from './tupper-main/tupper-main.component';
+import { InputIntegerComponent } from './input-integer/input-integer.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { TupperMainComponent } from './tupper-main/tupper-main.component';
     TupperListComponent,
     ShoppingCartComponent,
     TupperContactComponent,
-    TupperMainComponent
+    TupperMainComponent,
+    InputIntegerComponent
   ],
   imports: [
     BrowserModule,

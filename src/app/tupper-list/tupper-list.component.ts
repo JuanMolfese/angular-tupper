@@ -41,15 +41,4 @@ export class TupperListComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  UpQuantity(product: Product): void {
-    if(product.stock>product.quantity){ 
-      product.quantity++;
-    }
-  }
-
-  DownQuantity(product: Product): void {
-    if(product.quantity>0){
-      product.quantity--;
-    }
-  }
 }
