@@ -45,5 +45,7 @@ export class TupperListComponent implements OnInit {
 
   addToCart(product): void{
     this.cart.addToCart(product);
+    product.stock -= product.quantity;
+    product.quantity = 0;
   }
 }
