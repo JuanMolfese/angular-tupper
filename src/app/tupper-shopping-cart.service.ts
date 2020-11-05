@@ -1,5 +1,8 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 import { Product } from './tupper-list/product';
+
+
 
 @Injectable({
   providedIn: 'root'
@@ -7,17 +10,18 @@ import { Product } from './tupper-list/product';
 export class TupperShoppingCartService {
   
   constructor() { }
-
-  BuyList: Product[] = [];
+  private _buyList : Product[] = [];
+  buyList: BehaviorSubject <Product[]> = new BehaviorSubject([]);
 
   addToCart(product: Product) {
-    let item : Product = this.BuyList.find((elemento => elemento.name == product.name));
+    let item : Product = this._buyList.find((elemento => elemento.name == product.name));
     //Si no esta ese producto lo agrega
     if(!item){
-      this.BuyList.push({ ... product});  
+      this._buyList.push({ ... product});  
     }else{
       item.quantity += product.quantity;
     }
-    console.log(this.BuyList)
+    console.log(this._buyList);
+    this.buyList.next(this._buyList); //Le dice al Behavior que notifique el nuevo valor a la variable privada (equivale al emmiter de eventos).
   }
 }

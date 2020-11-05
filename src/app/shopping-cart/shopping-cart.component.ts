@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Product } from '../tupper-list/product';
 import { TupperShoppingCartService } from '../tupper-shopping-cart.service';
 
 @Component({
@@ -8,7 +9,11 @@ import { TupperShoppingCartService } from '../tupper-shopping-cart.service';
 })
 export class ShoppingCartComponent implements OnInit {
 
-  constructor(private cart: TupperShoppingCartService) { }
+  buyList: Product[] = [];
+
+  constructor(private cart: TupperShoppingCartService) { 
+    cart.buyList.subscribe( obserbable => this.buyList = obserbable);
+  }
 
   ngOnInit(): void {
   }
