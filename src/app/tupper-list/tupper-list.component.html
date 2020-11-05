@@ -8,6 +8,7 @@
             <th>Precio</th>
             <th></th>
             <th></th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -16,12 +17,15 @@
             <td>{{product.name}}</td>
             <td>{{product.type}}</td>
             <td>{{product.price | currency }}</td>
-            <td>
+            <td class="px-1 mx-0">
                 <span class="badge badge-danger" *ngIf="product.stock==0">NO DISPONIBLE</span>
                 <span class="badge badge-success" *ngIf="product.stock>0">DISPONIBLE</span>
             </td>
-            <td>
+            <td class="px-1 mx-0">
                 <app-input-integer [(quantity)]="product.quantity" [max]="product.stock" *ngIf="product.stock"></app-input-integer>
+            </td>
+            <td class="px-1 mx-0">
+                <button class="btn btn-success px-1 mx-0" (click)="addToCart(product)">Comprar</button>
             </td>
         </tr>
     </tbody>
