@@ -10,12 +10,13 @@ import { TupperShoppingCartService } from '../tupper-shopping-cart.service';
 export class ShoppingCartComponent implements OnInit {
 
   buyList: Product[] = [];
+  total: number;
 
   constructor(private cart: TupperShoppingCartService) { 
     cart.buyList.subscribe( obserbable => this.buyList = obserbable);
+    cart.total.subscribe(obserbableTotal => this.total = obserbableTotal);
   }
-
-  ngOnInit(): void {
+  
+  ngOnInit(): void {  
   }
-
 }
