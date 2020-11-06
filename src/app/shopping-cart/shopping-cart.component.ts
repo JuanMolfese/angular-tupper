@@ -19,4 +19,8 @@ export class ShoppingCartComponent implements OnInit {
   
   ngOnInit(): void {  
   }
+
+  confirmCart(buyList, total):void{
+   console.log("Verificar forma de pago y domicilio de entrega");
+  }
 }

@@ -20,7 +20,9 @@
     <div class="d-flex row form-row col-md-12">
         <label class="mt-5">Total</label>
         <input type="number" min="0" class="form-control border-0 bg-transparent text-right" id="total_cart" value="{{total}}" readonly>
-        <!-- value="{{total | currency}}" -->
+        <div class="text-center col-12 mt-5">
+            <button class="btn btn-info" (click)="confirmCart(buyList, total)">Confirmar Compra</button>
+        </div>
     </div>
 
 </aside>

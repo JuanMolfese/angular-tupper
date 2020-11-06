@@ -48,4 +48,5 @@ export class TupperListComponent implements OnInit {
     product.stock -= product.quantity;
     product.quantity = 0;
   }
+  
 }
