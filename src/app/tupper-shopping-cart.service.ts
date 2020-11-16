@@ -26,7 +26,8 @@ export class TupperShoppingCartService {
     }else{
       item.quantity += product.quantity;
     }
-    /* console.log(this._buyList); */
+    
     this.buyList.next(this._buyList); //Le dice al Behavior que notifique el nuevo valor a la variable privada (equivale al emmiter de eventos).
+    this.total.next(this._total);//Le dice al Behavior que notifique el nuevo valor a la variable privada (equivale al emmiter de eventos).
   }
 }
